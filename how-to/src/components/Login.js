@@ -63,7 +63,7 @@ function Login(props) {
       password: formValues.password.trim(),
     };
 
-    props.loginUser(newUser).then((response) => push("/plants"));
+    props.loginUser(newUser).then((response) => push("/How-To"));
   };
 
   useEffect(() => {

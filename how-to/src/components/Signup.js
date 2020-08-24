@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
-import signUp from '../validation/signUpForm'
+import signUp from "../validation/signUpForm";
 import axios from "axios";
 import { SignupContainer } from "./SignupStyle";
 import { FormContainer, FormGroup, Footer } from "./Global.style";
@@ -30,7 +30,7 @@ export default function Signup() {
   const signUpForm = (newForm) => {
     console.log({ newForm });
     axios
-      .post("https://watermyplants26.herokuapp.com/api/auth/register", newForm)
+      .post("https://howto-lifehack.herokuapp.com/login", newForm)
       .then((res) => {
         console.log(res);
         setRegister([res.data, ...register]);
@@ -86,7 +86,7 @@ export default function Signup() {
   return (
     <SignupContainer onSubmit={onSubmit}>
       <img
-        src="https://acad.xlri.ac.in/evening/images/login.svg"
+        src="https://app.nimbo-x.com/assets/images/dr-login.svg"
         alt="illustrator of a person sitting on a chair"
       ></img>
       <FormContainer>
