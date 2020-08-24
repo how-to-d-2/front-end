@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import * as Yup from "yup";
-import formSchema from "./validation/formSchema";
-import { LoginContainer } from "./Login.style";
+import formSchema from "../validation/formSchema";
+import { LoginContainer } from "./LoginStyle";
 import { FormContainer, FormGroup, Footer } from "./Global.style";
-import { connect } from "react-redux";
+
 import { loginUser } from "../actions/actions";
 
 const initialFormValues = {
@@ -76,7 +76,7 @@ function Login(props) {
     <LoginContainer onSubmit={onSubmit}>
       <img
         className="image"
-        src="https://acad.xlri.ac.in/evening/images/login.svg"
+        src="https://app.nimbo-x.com/assets/images/dr-login.svg"
         alt="illustrator of a person sitting on a chair"
       ></img>
       <FormContainer>
@@ -124,10 +124,4 @@ function Login(props) {
   );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    error: state.error,
-  };
-};
-
-export default connect(mapStateToProps, { loginUser })(Login);
+export default Login;
