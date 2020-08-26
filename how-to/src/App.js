@@ -32,6 +32,7 @@ function App() {
             <Route path="/How-To">
               <HowTos />
             </Route>
+
             <PrivateRoute path="/How-To" components={HowTos} />
           </Switch>
         </div>
