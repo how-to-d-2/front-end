@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import formSchema from "../validation/formSchema";
 import { LoginContainer } from "./LoginStyle";
 import { FormContainer, FormGroup, Footer } from "./Global.style";
-
+import { connect } from "react-redux";
 import { loginUser } from "../actions/actions";
 
 const initialFormValues = {
@@ -17,7 +17,7 @@ const intitalFormErrors = {
   password: "",
 };
 
-const initialUsers = [];
+// const initialUsers = [];
 const initialDisabled = true;
 
 function Login(props) {
@@ -124,4 +124,10 @@ function Login(props) {
   );
 }
 
-export default Login;
+const mapStateToProps = (state) => {
+  return {
+    error: state.error,
+  };
+};
+
+export default connect(mapStateToProps, { loginUser })(Login);

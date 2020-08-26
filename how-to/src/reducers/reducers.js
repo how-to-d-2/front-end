@@ -29,12 +29,12 @@ export const reducer = (state = initialState, action) => {
         isLoading: false,
         error: action.payload,
       };
-    case actions.UPDATE_USER_START:
+    case actions.UPDATE_HOWTO_START:
       return {
         ...state,
         isLoading: true,
       };
-    case actions.UPDATE_USER_SUCCESS:
+    case actions.UPDATE_HOWTO_SUCCESS:
       return {
         ...state,
         isLoading: false,
@@ -45,7 +45,7 @@ export const reducer = (state = initialState, action) => {
         },
         error: "",
       };
-    case actions.UPDATE_USER_FAILURE:
+    case actions.UPDATE_HOWTO_FAILURE:
       return {
         ...state,
         isLoading: false,
