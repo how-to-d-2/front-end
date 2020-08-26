@@ -58,7 +58,7 @@ const HowToForm = (props) => {
     <FormContainer>
       <FormGroup>
         <HowToFormWrapper onSubmit={handleSubmit}>
-          <label className="search" htmlFor="search">
+          {/* <label className="search" htmlFor="search">
             Search
           </label>
           <input
@@ -67,7 +67,7 @@ const HowToForm = (props) => {
             value={formState.search}
             placeholder="Search Category"
             onChange={handleChanges}
-          />
+          /> */}
           <label htmlFor="name">Name:</label>
           <input
             id="name"
