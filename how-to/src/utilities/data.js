@@ -2,20 +2,21 @@ const FAKE_DATA = [
   {
     id: 0,
     name: "React Redux",
-    description: "Learn react redux in 5 minutes",
-    category: "javascript",
+    description: "Learn React Redux in 30 days",
+    category: "Javascript",
   },
   {
     id: 1,
     name: "Node.js",
-    description: "learn a backend language",
-    category: "programming",
+    description:
+      "Learn a Backend Language in about 2 months without any computer prior knowledge ",
+    category: "Programming",
   },
   {
     id: 2,
     name: "Angular",
-    description: "Learn angular",
-    category: "angular",
+    description: "Learn Angular at your own pace online",
+    category: "Angular",
   },
 ];
 

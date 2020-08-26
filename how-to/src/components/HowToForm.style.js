@@ -36,8 +36,18 @@ export const HowToWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 
   padding: 3px;
+
+  .name {
+    font-size: 1.8rem;
+    color: blue;
+  }
+  .category {
+    font-size: 1.2rem;
+    font-style: italic;
+  }
 `;
 
 export const Button = styled.button`

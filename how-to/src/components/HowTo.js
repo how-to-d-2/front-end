@@ -7,7 +7,11 @@ import { HowToWrapper, Button } from "./HowToForm.style";
 
 const HowTo = (props) => {
   const [isEditing, setIsEditing] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
+  const onClicked = () => {
+    setIsClicked(!isClicked);
+  };
   const toggleIsEditing = () => {
     setIsEditing(!isEditing);
   };
@@ -23,13 +27,17 @@ const HowTo = (props) => {
   return (
     <HowToWrapper>
       {!isEditing && (
-        <div className="how-to-display">
-          <p>{props.name}</p>
-          <p>{props.category}</p>
-          <p>{props.description}</p>
+        <div onClick={onClicked} className="how-to-display">
+          <p className="name">{props.name}</p>
+          <p className="category">{props.category}</p>
+          <p className="description">{props.description}</p>
           {props.image && <img src={props.image} alt={props.category} />}
-          <Button onClick={onEditClick}>Edit</Button>
-          <Button onClick={onDeleteClick}>Delete</Button>
+          {isClicked && (
+            <div>
+              <Button onClick={onEditClick}>Edit</Button>
+              <Button onClick={onDeleteClick}>Delete</Button>
+            </div>
+          )}
         </div>
       )}
       {isEditing && (

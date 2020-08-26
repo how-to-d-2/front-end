@@ -14,6 +14,7 @@ const initialFormState = {
   category: "",
   description: "", //how to implement?
   image: "", //optional
+  search: "",
 };
 
 const HowToForm = (props) => {
@@ -57,6 +58,16 @@ const HowToForm = (props) => {
     <FormContainer>
       <FormGroup>
         <HowToFormWrapper onSubmit={handleSubmit}>
+          <label className="search" htmlFor="search">
+            Search
+          </label>
+          <input
+            id="search"
+            name="search"
+            value={formState.search}
+            placeholder="Search Category"
+            onChange={handleChanges}
+          />
           <label htmlFor="name">Name:</label>
           <input
             id="name"
