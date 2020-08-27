@@ -28,8 +28,6 @@ export const HowToFormWrapper = styled.form`
     outline: none;
     box-shadow: 0px 0px 12px 0.8px #3474dbb2;
   }
-  .description {
-  }
 `;
 
 export const HowToWrapper = styled.div`
@@ -37,16 +35,26 @@ export const HowToWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-
-  padding: 3px;
+  padding: 4px;
 
   .name {
     font-size: 1.8rem;
-    color: blue;
+    color: white;
   }
   .category {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-style: italic;
+    color: goldenrod;
+  }
+  .description {
+    color: darkcyan;
+  }
+  .how-to-display {
+    padding: 4px 4px;
+    margin: 2%;
+    background-color: #22222b;
+    width: 60%;
+    border-radius: 30px;
   }
 `;
 
@@ -63,7 +71,7 @@ export const Button = styled.button`
 `;
 
 export const FormContainer = styled.div`
-  margin-top: 0.5em;
+  margin-top: 0.8em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,16 +84,16 @@ export const FormGroup = styled.div`
   width: fit-content;
 
   input {
-    margin-top: 9px;
-    min-width: 30em;
+    margin-top: 10px;
+    min-width: 40em;
     height: 40px;
-    padding: 0px 10px;
+    padding: 0px 20px;
     font-size: 1rem;
     font-family: "Playfair Display", "Open Sans Consensed", sans-serif;
     background-color: #f3f3f3;
     border: 0;
     border-radius: 4px;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     transition: all 250ms ease-in-out;
   }
   input:hover {
@@ -97,6 +105,9 @@ export const FormGroup = styled.div`
     outline: none;
     box-shadow: 0px 0px 12px 0.8px #3474dbb2;
   }
+  .description {
+    height: 100px;
+  }
 `;
 
 export const Footer = styled.div`
@@ -107,30 +118,22 @@ export const Footer = styled.div`
   justify-content: center;
   align-items: center;
 
-  .btn {
-    font-family: "Playfair Display";
-    width: 200px;
-    font-size: 20px;
-    padding: 6px 30px;
-    border: 0;
-    background-color: #3498db;
-    color: #fff;
-    border-radius: 3px;
-    transition: all 250ms ease-in-out;
+  button {
+    min-width: 100%;
     cursor: pointer;
+    margin-right: 0.25em;
+    margin-top: 1em;
+    padding: 0.938em;
+    border: none;
+    border-radius: 4px;
+    background-color: #22223b;
+    color: #fefefe;
   }
-  .btn:hover {
-    background-color: #2386c8;
+  button:hover {
+    background-color: #4a4e69;
+    color: #fefefe;
   }
-  .btn:focus {
-    outline: not-allowed;
-  }
-  .btnDisable,
-  .btnDisable:hover {
-    cursor: not-allowed;
-    background-color: grey;
-  }
-  p {
-    font-family: "Playfair Display", "Open Sans Condensed", sans-serif;
+  button:disabled {
+    opacity: 0.2;
   }
 `;

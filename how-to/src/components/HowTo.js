@@ -4,6 +4,7 @@ import HowToForm from "./HowToForm";
 import { connect } from "react-redux";
 import { deleteHowTo } from "../actions/actions";
 import { HowToWrapper, Button } from "./HowToForm.style";
+import FlipMove from "react-flip-move";
 
 const HowTo = (props) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -35,6 +36,7 @@ const HowTo = (props) => {
           {isClicked && (
             <div>
               <Button onClick={onEditClick}>Edit</Button>
+
               <Button onClick={onDeleteClick}>Delete</Button>
             </div>
           )}

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { editHowTo, addHowTo } from "../actions/actions";
-
 import {
   HowToFormWrapper,
   FormContainer,
@@ -68,7 +67,9 @@ const HowToForm = (props) => {
             placeholder="Search Category"
             onChange={handleChanges}
           /> */}
-          <label htmlFor="name">Name:</label>
+          <label className="inputName" htmlFor="name">
+            Name:
+          </label>
           <input
             id="name"
             name="name"
@@ -82,10 +83,9 @@ const HowToForm = (props) => {
             value={formState.category}
             onChange={handleChanges}
           />
-          <label className="description" htmlFor="description">
-            Description:
-          </label>
+          <label htmlFor="description">Description:</label>
           <input
+            className="description"
             id="description"
             name="description"
             value={formState.description}
