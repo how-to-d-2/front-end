@@ -29,7 +29,7 @@ export const loginUser = (user) => {
   return (dispatch) => {
     dispatch({ type: LOGIN_USER_START });
     return axiosWithAuth()
-      .post("", user)
+      .post("/api/auth/register", user)
       .then((response) => {
         localStorage.setItem("token", response.data.token);
         dispatch({ type: LOGIN_USER_SUCCESS, payload: response.data.user });
@@ -84,7 +84,7 @@ export const fetchHowTo = () => {
     console.log("Called in line 84");
 
     axiosWithAuth()
-      .get("")
+      .get()
       .then((response) => {
         console.log("Called in line 89");
         dispatch({ type: FETCH_HOWTO_SUCCESS, payload: response.data });
@@ -136,7 +136,7 @@ export const deleteHowTo = (id) => {
   return (dispatch) => {
     // dispatch({ type: DELETE_HOWTO_START });
     // axiosWithAuth()
-    //   .delete("")
+    //   .delete(`/api/howtos/${id})
     //   .then((response) => {
     dispatch({ type: DELETE_HOWTO_SUCCESS, payload: id });
     // })
